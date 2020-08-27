@@ -1227,6 +1227,8 @@ MonoBehaviour:
   effect: {fileID: 1102949347072552183, guid: 66fa421ae8047194a80e43d455b2671a, type: 3}
   healthDisplay: {fileID: 755975966}
   gameover: {fileID: 814605532}
+  MoveSound: {fileID: 8794183389631190145, guid: 9db5d5c10ea24c84481fde0ba533fd64,
+    type: 3}
 --- !u!50 &1533645420
 Rigidbody2D:
   serializedVersion: 4

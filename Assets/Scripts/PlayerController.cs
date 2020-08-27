@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public Text healthDisplay;
 
     public GameObject gameover;
+    public GameObject MoveSound;
     private void Update()
     {
         healthDisplay.text = health.ToString();
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         // Tarkistaa onko pelaaja painanut ala nuolinäppäintä ja estetään pelihahmon liikkuminen ruudu ulkopuolelle
         if (Input.GetKeyDown(KeyCode.UpArrow)&& transform.position.y < maxHeight) 
         {
+            Instantiate(MoveSound, transform.position, Quaternion.identity);
             Instantiate(effect, transform.position, Quaternion.identity);
             // Kun pelaaja painaa ylä nuolinäppäintä pelihahmo liikkuu ylöspäin
             targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
         } // Tarkistaa onko pelaaja painanut ala nuolinäppäintä ja estetään pelihahmon liikkuminen ruudu ulkopuolelle
         else if (Input.GetKeyDown(KeyCode.DownArrow)&& transform.position.y > minHeight) 
         {
+            Instantiate(MoveSound, transform.position, Quaternion.identity);
             Instantiate(effect, transform.position, Quaternion.identity);
             // Kun pelaaja painaa ala nuolinäppäintä pelihahmo liikkuu alaspäin
             targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement); 

@@ -9,6 +9,8 @@ public class Tnt : MonoBehaviour
 
     public GameObject effect;
 
+    public GameObject HitSound;
+
     private void Update()
     {
         // Tnt laatikko liikkuu pelaajaa kohti
@@ -17,7 +19,9 @@ public class Tnt : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
+        {   // Osuma ääni kuuluu aina kun pelaaja osuu viholliseen
+            Instantiate(HitSound, transform.position, Quaternion.identity);
+            
             Instantiate(effect, transform.position, Quaternion.identity);
             // Pelaaja ottaa vahinkoa osuessaan viholliseen
             other.GetComponent<PlayerController>().health -= damage;
