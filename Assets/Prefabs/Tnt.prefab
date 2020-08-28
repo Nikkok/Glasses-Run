@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 13
+  speed: 11
   effect: {fileID: 1716479762186090431, guid: 599d7cc4d0d39fe46b11e4502d26ef89, type: 3}
   HitSound: {fileID: 7599356119693843815, guid: 8ae632e4432a08040aa58f6448e7c9c5,
     type: 3}
@@ -139,4 +139,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192dd111972b7444baf766b148f43320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 10
+  lifetime: 5
